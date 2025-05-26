@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Hi-Tech - Futuriste & Cyberpunk</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="profile-header">
+      <img src="img/ma_photo.jpg" alt="Photo de profil de Alseny Diallo" class="profile-pic" />
+      <div class="profile-info">
+        <h1>Alseny Diallo</h1>
+        <p>Étudiant en cybersécurité</p>
+      </div>
+    </div>
+    <div class="logo" aria-label="Logo Hi-Tech Portfolio">PORTFOLIO</div>
+    <nav aria-label="Menu principal de navigation">
+      <a href="#accueil" class="nav-link">Accueil</a>
+      <a href="#a-propos" class="nav-link">À propos</a>
+      <a href="#projets" class="nav-link">Projets</a>
+      <a href="#cv" class="nav-link">CV</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil" tabindex="0" aria-label="Section Accueil">
+      <h1>Bienvenue sur mon Portfolio</h1>
+      <p class="subtitle">Cybersecurity &amp; Pentesting | Développement Web | Passion Tech</p>
+      <button onclick="scrollToSection('a-propos')" class="neon-btn" aria-label="Découvrir À propos">Découvrir À propos</button>
+    </section>
+
+    <section id="a-propos" tabindex="0" aria-label="Section À propos - Bio et compétences">
+      <h2>À propos de moi</h2>
+      <p>Passionné par la cybersécurité et le pentesting, je développe mes compétences en sécurité informatique, développement web et technologie innovante.</p>
+      <h3>Compétences techniques :</h3>
+      <ul class="skills-list" aria-label="Liste des compétences techniques">
+        <li>Audit de sécurité</li>
+        <li>Python &amp; Bash scripting</li>
+        <li>Network Security</li>
+        <li>HTML5, CSS3, JavaScript</li>
+        <li>Pentesting &amp; Ethical Hacking</li>
+      </ul>
+    </section>
+
+    <section id="projets" tabindex="0" aria-label="Section Projets - Galerie des projets">
+      <h2>Projets réalisés</h2>
+      <div class="filter-buttons" role="radiogroup" aria-label="Filtrer les projets par catégorie">
+        <button class="filter-btn active" data-filter="all" aria-checked="true" role="radio">Tous</button>
+        <button class="filter-btn" data-filter="web" aria-checked="false" role="radio">Web</button>
+        <button class="filter-btn" data-filter="security" aria-checked="false" role="radio">Sécurité</button>
+        <button class="filter-btn" data-filter="tools" aria-checked="false" role="radio">Outils</button>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card" data-category="web">
+          <h3>Site Web Portfolio</h3>
+          <p>Un site web responsive présentant mes compétences et projets personnels.</p>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Voir le projet Site Web Portfolio">Voir le projet</a>
+        </article>
+        <article class="project-card" data-category="security">
+          <h3>Audit de Sécurité Réseau</h3>
+          <p>Rapport complet d'audit de sécurité pour un réseau d'entreprise.</p>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Voir le projet Audit de Sécurité Réseau">Voir le projet</a>
+        </article>
+        <article class="project-card" data-category="tools">
+          <h3>Outil d'Analyse de Logs</h3>
+          <p>Développement d'un outil Python pour analyser et filtrer des logs système.</p>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Voir le projet Outil d'Analyse de Logs">Voir le projet</a>
+        </article>
+        <article class="project-card" data-category="web">
+          <h3>Application Web de Monitoring</h3>
+          <p>Dashboard web temps réel pour la surveillance des systèmes critiques.</p>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Voir le projet Application Web de Monitoring">Voir le projet</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="cv" tabindex="0" aria-label="Section CV">
+      <h2>Mon CV</h2>
+      <p>Téléchargez mon CV au format PDF pour plus d'informations détaillées sur mon parcours.</p>
+      <a href="cv/mon_cv.pdf" download="CV_HiTech.pdf" class="download-btn" aria-label="Télécharger le CV">Télécharger le CV</a>
+    </section>
+
+    <section id="contact" tabindex="0" aria-label="Section Contact - Formulaire et informations">
+      <h2>Contactez-moi</h2>
+      <form id="contactForm" aria-live="polite" novalidate action="https://formspree.io/f/mrbqwdev" method="POST">
+        <label for="nom">Nom complet</label>
+        <input type="text" id="nom" name="nom" placeholder="Votre nom" required aria-required="true" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="votre.email@example.com" required aria-required="true" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Votre message..." required aria-required="true"></textarea>
+
+        <button type="submit" aria-label="Envoyer le message">Envoyer</button>
+      </form>
+      <p id="formMessage" role="alert" aria-live="assertive" class="form-message"></p>
+    </section>
+  </main>
+
+  <footer>
+    © 2024 - Portfolio Hi-Tech - Design Cyberpunk & Neon
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
